@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Magento\CatalogSearch\Model\ResourceModel\Fulltext\CollectionFactory" type="Magento\Catalog\Model\ResourceModel\Product\CollectionFactory">
+        <arguments>
+            <argument name="instanceName" xsi:type="string">Ab\Sortpositionfix\Model\CatalogSearch\ResourceModel\Fulltext\Collection</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="elasticsearchCategoryCollection" type="Ab\Sortpositionfix\Model\CatalogSearch\ResourceModel\Fulltext\Collection"/>
+    <virtualType name="elasticsearchFulltextSearchCollection" type="Ab\Sortpositionfix\Model\CatalogSearch\ResourceModel\Fulltext\Collection"/>
+    <preference for="Magento\CatalogSearch\Model\ResourceModel\Fulltext\Collection" type="Ab\Sortpositionfix\Model\CatalogSearch\ResourceModel\Fulltext\Collection"/>
+</config>
